@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blinking Test Icon Button</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    .test-button {
+      padding: 20px 30px;
+      border: none;
+      background-color: #4CAF50;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: blink 1s infinite;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .test-button:hover {
+      background-color: #00ff00;
+      box-shadow: 0 0 20px #00ff00;
+      animation: neon 1s infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes neon {
+      0% {
+        background-color: #ff00ff;
+      }
+      25% {
+        background-color: #00ffff;
+      }
+      50% {
+        background-color: #ff0000;
+      }
+      75% {
+        background-color: #00ff00;
+      }
+      100% {
+        background-color: #ffff00;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="test-button">
+    <i class="fas fa-edit"></i>
+    Take Test
+  </button>
+</body>
+</html>
